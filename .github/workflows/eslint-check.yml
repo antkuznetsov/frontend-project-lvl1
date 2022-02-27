@@ -1,8 +1,10 @@
 name: eslint-check
 on: push
 jobs:
-  my-job:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: greeting
-        run: echo "Hello World!"
+        run: echo "Hello, ESLint!"
+      - name: build application
+        run: make lint
